@@ -33,6 +33,28 @@
 		var thisyear=new Date();
 		var etr=thisyear.getFullYear()-a;
 		document.getElementById("age").innerHTML=etr;
+		try {
+			if (a>150) {
+				throw "Err1";	
+			}
+			else if (a<0) {
+				throw "Err2";	
+			}
+			else if (isNAN(a)) {
+				throw "Err3";
+			}
+		}
+		catch (err) {
+			if (err==Err1) {
+				document.write("Your input is very big !");	
+			}
+			if (err==Err2) {
+				document.write("Your input is very small !");
+			}
+			if (err==Err3) {
+					document.write("Your input is empty !");
+			}
+		}
 	}
 </script>
 </head>
