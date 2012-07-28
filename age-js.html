@@ -31,9 +31,20 @@
 	window.onload = function (){
 		var age=a;
 		var thisyear=new Date();
-		var etr=thisyear.getFullYear()-a;
-		document.getElementById("age").innerHTML=etr;
-		try {
+		if (a>0 && a<150) {
+			var etr=thisyear.getFullYear()-a;
+			document.getElementById("age").innerHTML=etr;
+		}
+		else if (a>=150) {
+			document.getElementById("age").innerHTML="Your input is very big !";
+		}
+		else if (a<=0) {
+			document.getElementById("age").innerHTML="Your input is very small !"	
+		}
+		else if (isNAN(a)) {
+			document.getElementById("age").innerHTML="Your input is empty !"
+		}
+		/*try {
 			if (a>150) {
 				throw "Err1";	
 			}
@@ -52,9 +63,9 @@
 				document.write("Your input is very small !");
 			}
 			if (err==Err3) {
-					document.write("Your input is empty !");
+				document.write("Your input is empty !");
 			}
-		}
+		}*/
 	}
 </script>
 </head>
