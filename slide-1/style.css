@@ -28,7 +28,11 @@ div.slider {
 div.bgslide {
 	width:800px;
 	height:400px;
-	background-color:#050505;	
+	background-color:#050505;
+	background-image:url('image/load.gif');
+	background-position:center;
+	background-repeat:no-repeat;
+	box-shadow:0 0 10px 5px #CCCCCC;	
 }
 
 div.slides {
